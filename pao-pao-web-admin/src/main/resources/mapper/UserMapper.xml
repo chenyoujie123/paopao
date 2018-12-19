@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gz.pao.pao.web.admin.mapper.UserMapper">
+    <sql id="userColumns">
+        a.id,
+        a.username,
+        a.password,
+        a.sex,
+        a.age,
+        a.height,
+        a.city,
+        a.phone,
+        a.email,
+        a.user_desc AS userDesc,
+        a.head_pic AS headPic,
+        a.pic,
+        a.status
+    </sql>
+    <select id="getByLoginId" resultType="User">
+        SELECT
+          <include refid="userColumns"/>
+        FROM
+          p_user AS a
+        WHERE
+          a.username = #{username} OR a.phone = #{phone} OR a.email = #{email}
+    </select>
+</mapper>
