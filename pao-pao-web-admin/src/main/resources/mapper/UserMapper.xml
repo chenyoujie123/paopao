@@ -24,4 +24,13 @@
         WHERE
           a.username = #{username} OR a.phone = #{phone} OR a.email = #{email}
     </select>
+
+    <select id="getInfoById" resultType="User" >
+        SELECT
+        <include refid="userColumns"/>
+        FROM
+        p_user AS a
+        WHERE
+        a.id=#{id}
+    </select>
 </mapper>

@@ -64,7 +64,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">个人信息<span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="faq.html">查看个人空间</a></li>
+                                    <li><a href="/info?id=${sessionScope.user.id}">查看个人空间</a></li>
                                     <li><a href="shortcodes.html">个人信息修改</a></li>
                                 </ul>
                             </li>
@@ -75,6 +75,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </ul>
                             </li>
                             <li class="last"><a href="contact.html">联系我们 !</a></li>
+                            <li><a href="contact.html">登出</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </nav>
@@ -88,7 +89,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="container">
         <div class="banner_info">
             <h3>欢迎来到"泡 泡"</h3>
-            <a href="view_profile.html" class="hvr-shutter-out-horizontal">查看你的个人空间</a>
+            <a href="/info?id=${sessionScope.user.id}" class="hvr-shutter-out-horizontal">查看你的个人空间</a>
         </div>
     </div>
     <div class="profile_search">
@@ -97,23 +98,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="search_top">
                     <div class="inline-block">
                         <label class="gender_1">我正在寻找</label>
-                        <div class="age_box1" style="max-width: 100%; display: inline-block;">
-                            <select>
-                                <option value="">* 选择性别</option>
-                                <option value="Male">Bride</option>
-                                <option value="Female">Groom</option>
-                            </select>
-                        </div>
+                        <<input type="text" name="name" size="30" maxlength="30" class="form-text required">
                     </div>
                     <div class="inline-block">
                         <label class="gender_1">选择城市:</label>
-                        <div class="age_box1" style="max-width: 100%; display: inline-block;">
-                            <select>
-                                <option value="">* 城市</option>
-                                <option value="Washington">Washington</option>
-
-                            </select>
-                        </div>
+                        <input type="text" name="name" size="30" maxlength="30" class="form-text required">
                     </div>
                 </div>
                 <div class="submit inline-block">

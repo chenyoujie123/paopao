@@ -86,7 +86,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
         <div class="profile">
             <div class="col-md-8 profile_left">
-                <h2>小川酱</h2>
+                <h2>${user.username}</h2>
                 <div class="col_3">
                     <div class="col-sm-4 row_2">
                         <div class="flexslider">
@@ -111,34 +111,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <tbody>
                             <tr class="opened_1">
                                 <td class="day_label">性别：</td>
-                                <td class="day_value">女</td>
+                                <td class="day_value">${user.sex}</td>
                             </tr>
                             <tr class="opened">
                                 <td class="day_label">年龄：</td>
-                                <td class="day_value">18</td>
+                                <td class="day_value">${user.age}</td>
                             </tr>
                             <tr class="opened">
                                 <td class="day_label">身高：</td>
-                                <td class="day_value">170</td>
+                                <td class="day_value">${user.height}</td>
                             </tr>
                             <tr class="opened">
                                 <td class="day_label">城市 :</td>
-                                <td class="day_value">成都</td>
+                                <td class="day_value">${user.city}</td>
                             </tr>
                             <tr class="opened">
                                 <td class="day_label">联系方式 :</td>
-                                <td class="day_value">120</td>
+                                <td class="day_value">${user.phone}</td>
                             </tr>
                             <tr class="opened">
                                 <td class="day_label">电子邮箱 :</td>
-                                <td class="day_value">777@163.com</td>
+                                <td class="day_value">${user.email}</td>
                             </tr>
                             <tr class="closed">
                                 <td class="day_label"></td>
                             </tr>
                             <tr class="closed">
                                 <td class="day_label">个性签名 :</td>
-                                <td class="day_value">黎明就在眼前</td>
+                                <td class="day_value">${user.userDesc}</td>
                             </tr>
                             </tbody>
                         </table>
