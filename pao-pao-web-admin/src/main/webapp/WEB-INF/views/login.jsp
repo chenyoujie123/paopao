@@ -1,9 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-
 <head>
     <meta charset="utf-8" />
-    <title>Login</title>
+    <title>登录_泡泡社交</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="Preview page of Metronic Admin Theme #4 for " name="description" />
@@ -40,7 +39,7 @@
         </div>
         <div class="col-md-6 login-container bs-reset mt-login-5-bsfix">
             <div class="login-content">
-                <h1 align="center"> 泡泡社交</h1>
+                <h1 align="center" style="color: #1adbd1;font-family: 黑体;"> 泡泡社交</h1>
                 <p align="center"> "泡"出你所爱~</p>
                 <form action="/login" class="login-form" method="post">
                     <div class="alert alert-danger display-hide">
@@ -64,7 +63,7 @@
                         </div>
                         <div class="col-sm-8 text-right">
                             <button class="btn green" type="submit">开"泡"啦</button>
-                            <a class="btn blue" href="#">加入泡泡</a>
+                            <a class="btn blue" href="/register">加入泡泡</a>
                         </div>
 
                     </div>
@@ -78,7 +77,7 @@
 
                     <div class="col-xs-7 bs-reset">
                         <div class="login-copyright text-right">
-                            <a href="#">我是管理员！</a>
+                            <a href="/adlogin">我是管理员！</a>
                             <p>Copyright &copy; paopao 2018</p>
                         </div>
                     </div>

@@ -6,5 +6,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserMapper {
 
+    User getInfoById (Integer id);
+
     User getByLoginId(User params);
+
+
 }

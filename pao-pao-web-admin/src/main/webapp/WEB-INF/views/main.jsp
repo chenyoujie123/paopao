@@ -36,59 +36,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 <!-- ============================  Navigation Start =========================== -->
-<div class="navbar navbar-inverse-blue navbar">
-    <!--<div class="navbar navbar-inverse-blue navbar-fixed-top">-->
-    <div class="navbar-inner">
-        <div class="container">
-            <div class="navigation">
-
-            </div>
-            <a class="brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
-            <div class="pull-right">
-                <nav class="navbar nav_bottom" role="navigation">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header nav_2">
-                        <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">Menu
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#"></a>
-                    </div>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
-                        <ul class="nav navbar-nav nav_1">
-                            <li><a href="index.html">首页</a></li>
-                            <li><a href="about.html">关于我们</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">个人信息<span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="faq.html">查看个人空间</a></li>
-                                    <li><a href="shortcodes.html">个人信息修改</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">消息<span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="inbox.html">留言板</a></li>
-                                </ul>
-                            </li>
-                            <li class="last"><a href="contact.html">联系我们 !</a></li>
-                        </ul>
-                    </div><!-- /.navbar-collapse -->
-                </nav>
-            </div> <!-- end pull-right -->
-            <div class="clearfix"> </div>
-        </div> <!-- end container -->
-    </div> <!-- end navbar-inner -->
-</div> <!-- end navbar-inverse-blue -->
+<%@ include file="include/nav.jsp" %>
 <!-- ============================  Navigation End ============================ -->
 <div class="banner">
     <div class="container">
         <div class="banner_info">
-            <h3>欢迎来到"泡 泡"</h3>
-            <a href="view_profile.html" class="hvr-shutter-out-horizontal">查看你的个人空间</a>
+            <h3 style="font-family: 楷体;color: #1adbd1">欢迎来到"泡泡"</h3>
+            <a href="/info?id=${sessionScope.user.id}" class="hvr-shutter-out-horizontal">查看您的个人空间</a>
         </div>
     </div>
     <div class="profile_search">
@@ -96,24 +50,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <form action="">
                 <div class="search_top">
                     <div class="inline-block">
-                        <label class="gender_1">我正在寻找</label>
-                        <div class="age_box1" style="max-width: 100%; display: inline-block;">
-                            <select>
-                                <option value="">* 选择性别</option>
-                                <option value="Male">Bride</option>
-                                <option value="Female">Groom</option>
-                            </select>
-                        </div>
+                        <label class="gender_1">我正在寻找着...</label>
                     </div>
                     <div class="inline-block">
-                        <label class="gender_1">选择城市:</label>
-                        <div class="age_box1" style="max-width: 100%; display: inline-block;">
-                            <select>
-                                <option value="">* 城市</option>
-                                <option value="Washington">Washington</option>
-
-                            </select>
-                        </div>
+                        <label class="gender_1">您希望的对象性别是：</label>
+                        <input type="text" name="name" size="30" maxlength="30" class="form-text required">
+                    </div>
+                    <div class="inline-block">
+                        <label class="gender_1">请输入您的城市：</label>
+                        <input type="text" name="name" size="30" maxlength="30" class="form-text required">
                     </div>
                 </div>
                 <div class="submit inline-block">
@@ -217,23 +162,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="clearfix"> </div>
     </div>
 </div>
-<div class="footer">
-    <div class="container">
-        <div class="col-md-4 col_2">
-            <h4>相关简介</h4>
-            <p>泡泡科技荣誉产品</p>
-        </div>
-        <div class="col-md-4 col_4">
-            <h4>联系我们！</h4>
-            <li>联系电话: 020 - 6666 8888</li>
-            <li>电子邮箱地址: paopaokeji@foxmail.com</li>
-            <li>联系地址: 广州市天河区体育西路66号1层101</li>
-        </div>
-        <div class="clearfix"> </div>
-        <div class="copy">
-            <p>Copyright &copy; 2018.PaoPaoKeJi All rights reserved.</p>
-        </div>
-    </div>
-</div>
+<%@ include file="include/footer.jsp" %>
 </body>
 </html>

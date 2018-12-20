@@ -12,7 +12,7 @@ public class User implements Serializable {
     private String password;
     private String sex;
     private Integer age;
-    private Double height;
+    private Integer height;
     private String city;
     private String phone;
     private String email;
