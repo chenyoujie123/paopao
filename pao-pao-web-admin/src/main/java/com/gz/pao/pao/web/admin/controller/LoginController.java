@@ -16,11 +16,25 @@ public class LoginController {
     @Autowired
     private LoginService loginService;
 
-    @GetMapping("/login")
+    //跳转至登录页
+    @GetMapping(value ="/login")
     public String login(){
-        return "/login";
+        return "login";
     }
 
+    //跳转到注册页
+    @GetMapping(value = "/register")
+    public String register(){
+        return "register";
+    }
+
+    //跳转至管理员登录页
+    @GetMapping(value = "/adlogin")
+    public String adlogin(){
+        return "/admin/adlogin";
+    }
+
+    //此处为登录功能（可用用户名、手机、邮箱进行登录）
     @PostMapping(value = "/login")
     public String login(String loginId, String loginPwd, HttpServletRequest req, Model model){
 
@@ -38,6 +52,7 @@ public class LoginController {
         }
     }
 
+    //此处为登出功能
     @GetMapping(value = "/logout")
     public String logout(HttpServletRequest request){
 

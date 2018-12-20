@@ -48,7 +48,7 @@
 <div class="content">
     <!-- BEGIN LOGIN FORM -->
     <form class="login-form" action="/adlogin" method="post">
-        <h3 class="form-title">泡泡社交管理后台</h3>
+        <h3 class="form-title" style="text-align: center;color: #1adbd1;font-family: 'Microsoft YaHei UI'">泡泡社交管理后台</h3>
         <div class="alert alert-danger ${message == null ? 'display-hide' : ''}">
             <button class="close" data-close="alert"></button>
             <span> ${message} </span>
@@ -71,7 +71,13 @@
                 <input name="isRemember" type="checkbox" ${isRemember == true ? "checked" : ""}/> 记住我？
                 <span></span>
             </label>
-            <button type="submit" class="btn green pull-right"> 登录 </button>
+
+            <a href="#">
+                <button type="submit" class="btn green"> 管理员登录 </button>
+            </a>
+            <a href="/login">
+                <button type="button" class="btn blue pull-right">返回主页</button>
+            </a>
         </div>
 
     </form>

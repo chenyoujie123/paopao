@@ -43,13 +43,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="navigation">
 
             </div>
-            <a class="brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
+            <a class="brand" href="/main"><img src="/static/assets/pages/img/login/logo.png" alt="logo"></a>
             <div class="pull-right">
                 <nav class="navbar nav_bottom" role="navigation">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header nav_2">
-                        <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">Menu
-                            <span class="sr-only">Toggle navigation</span>
+                        <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">菜单
+                            <span class="sr-only">切换导航</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -59,22 +59,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                         <ul class="nav navbar-nav nav_1">
-                            <li><a href="index.html">首页</a></li>
-                            <li><a href="about.html">关于我们</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">个人信息<span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="faq.html">查看个人空间</a></li>
-                                    <li><a href="shortcodes.html">个人信息修改</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">消息<span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="inbox.html">留言板</a></li>
-                                </ul>
-                            </li>
-                            <li class="last"><a href="contact.html">联系我们 !</a></li>
+                            <li class="last"><a href="/intro">关于泡泡 !</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </nav>
@@ -82,13 +67,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="clearfix"> </div>
         </div> <!-- end container -->
     </div> <!-- end navbar-inner -->
-</div> <!-- end navbar-inverse-blue -->
+</div>
 <!-- ============================  Navigation End ============================ -->
 <div class="grid_3">
     <div class="container">
         <div class="breadcrumb1">
             <ul>
-                <a href="index.html"><i class="fa fa-home home_1">首页</i></a>
+                <a href="/main"><i class="fa fa-home home_1">首页</i></a>
                 <span class="divider">&nbsp;|&nbsp;</span>
                 <li class="current-page">用户注册</li>
             </ul>
@@ -129,12 +114,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <input type="text" name="name" value="" size="60" maxlength="60" class="form-text required">
                     </div>
                     <div class="form-group">
+                        <label for="edit-pass">头像上传 <span class="form-required" title="This field is required.">*</span></label>
+                        <input type="text" name="name" value="" size="60" maxlength="60" class="form-text required">
+                    </div>
+                    <div class="form-group">
                         <label for="edit-name">个性签名 <span class="form"></span></label>
                         <textarea class="form-control bio" placeholder="" rows="3"></textarea>
                     </div>
                     <div class="form-actions">
-                        <input type="submit" id="edit-submit" name="op" value="确定提交" class="btn_1 submit">
-                        <input type="button" id="ri" name="ri" value="返回登录" class="btn_1">
+                        <a href="#">
+                            <input type="submit" id="edit-submit" name="op" value="确定提交" class="btn_1 submit">
+                        </a>
+                        <a href="/login">
+                            <input type="button" id="ri" name="ri" value="返回登录" class="btn_1">
+                        </a>
                     </div>
 
                 </form>
@@ -149,23 +142,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
     </div>
 </div>
-<div class="footer">
-    <div class="container">
-        <div class="col-md-4 col_2">
-            <h4>相关简介</h4>
-            <p>泡泡科技荣誉产品</p>
-        </div>
-        <div class="col-md-4 col_4">
-            <h4>联系我们！</h4>
-            <li>联系电话: 020 - 6666 8888</li>
-            <li>电子邮箱地址: paopaokeji@foxmail.com</li>
-            <li>联系地址: 广州市天河区体育西路66号1层101</li>
-        </div>
-        <div class="clearfix"> </div>
-        <div class="copy">
-            <p>Copyright &copy; 2018.PaoPaoKeJi All rights reserved.</p>
-        </div>
-    </div>
-</div>
+<%@ include file="include/footer.jsp" %>
 </body>
 </html>
