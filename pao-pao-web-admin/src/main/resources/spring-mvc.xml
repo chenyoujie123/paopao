@@ -37,6 +37,8 @@
             <mvc:mapping path="/**"/>
             <mvc:exclude-mapping path="/static/**" />
             <mvc:exclude-mapping path="/login" />
+            <mvc:exclude-mapping path="/adlogin" />
+            <mvc:exclude-mapping path="/register" />
             <bean class="com.gz.pao.pao.web.admin.interceptor.LoginInterceptor" />
         </mvc:interceptor>
         <mvc:interceptor>
